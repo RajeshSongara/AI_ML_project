@@ -5,15 +5,15 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from flask import Flask, request, render_template
-from database.db import create_table, insert_data
+from db import create_table, insert_data
 import pickle
-from database.db import create_table, insert_data,fetch_data
+from db import create_table, insert_data,fetch_data
 
 
 app = Flask(__name__)
 
 # Model load
-model = pickle.load(open('model/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 # Table create (app start pe)
 create_table()
