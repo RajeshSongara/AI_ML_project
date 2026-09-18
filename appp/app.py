@@ -1,7 +1,6 @@
 import sys
 import os
 
-# 🔥 VERY IMPORTANT (top me hi hona chahiye)
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from flask import Flask, request, render_template
@@ -29,7 +28,6 @@ def predict():
 
     prediction = model.predict([[hours, attendance]])
 
-    # 🔥 SAVE DATA HERE
     insert_data(hours, attendance, float(prediction[0]))
 
     return f"Predicted Marks: {prediction[0]}"

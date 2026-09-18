@@ -10,3 +10,4 @@ model = LinearRegression()
 model.fit(x,y)
 pickle.dump(model,open('model.pkl','wb'))
 print("Model trained and saved")
+                        
